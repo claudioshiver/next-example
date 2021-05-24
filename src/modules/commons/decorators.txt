@@ -1,0 +1,14 @@
+import "reflect-metadata";
+import {useMemo} from "react";
+
+export const Model = function<Type>(): ClassDecorator {
+    return (Target: any) => {
+        console.log('ClassDecorator', Target);
+        Reflect.defineMetadata('test:deco', 'value', Target);
+        Target.get = function(data: Type) {
+            return useMemo(() => {
+                return Object.assign(new Target(), data);
+            }, [data]);
+        }
+    }
+};

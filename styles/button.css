@@ -1,0 +1,21 @@
+@layer components {
+    .btn {
+        @apply
+            py-2
+            px-4
+            border
+            font-bold
+            focus:outline-none
+            rounded
+            appearance-none;
+    }
+
+    .btn-primary {
+        @apply
+            bg-white
+            text-primary
+            border-primary
+            hover:bg-primary
+            hover:text-white;
+    }
+}
