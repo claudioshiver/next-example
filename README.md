@@ -55,6 +55,10 @@ Yuo can learn more about Tailwind CSS at the following resources:
 - [Directives](https://tailwindcss.com/docs/functions-and-directives) - learn how to use Tailwind directives
 - [Imports](https://www.npmjs.com/package/postcss-import) - learn about PostCSS Imports
 
+#### Versioning
+#### Test
+#### Deploy
+
 ## Other libraries
 
 - [classnames](https://www.npmjs.com/package/classnames) - a simple utility for conditionally joining classNames together.
