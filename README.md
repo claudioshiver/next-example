@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 #### File Structure
 
 React doesn’t have opinions on how you put files into folders. That said there are a few common [approaches](https://reactjs.org/docs/faq-structure.html) popular in the ecosystem you may want to consider.
-This project mix the two suggested approaches grouping files by modules and then file types.
+This project mix the two suggested approaches grouping files by modules and then by file types.
 
 ## Learn More
 

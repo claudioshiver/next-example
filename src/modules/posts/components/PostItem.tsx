@@ -44,7 +44,7 @@ const PostItem: React.FC<PostItemProps> = function (props: PostItemProps) {
 
             <div className="flex justify-between text-xs">
                 <div><strong>USER ID:</strong> {post.userId}</div>
-                <div><strong>USER NAME:</strong> {post.user?.fullName}</div>
+                {post.user && <div><strong>USER NAME:</strong> {post.user?.fullName}</div>}
             </div>
         </div>
     )

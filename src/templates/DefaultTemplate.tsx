@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from "../modules/commons/components/Layout";
+import Layout from "./Layout";
 
 function DefaultTemlpate({ children }) {
     return (
