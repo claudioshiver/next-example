@@ -11,13 +11,13 @@ const Layout: React.FC = function({ children }) {
 
                 <div>
                     <Link href="/" passHref>
-                        <a className="py-2 px-4 inline-block">Home</a>
+                        <a data-cy="nav-home" className="py-2 px-4 inline-block">Home</a>
                     </Link>
                     <Link href="/users" passHref>
-                        <a className="py-2 px-4 inline-block">Users</a>
+                        <a data-cy="nav-users" className="py-2 px-4 inline-block">Users</a>
                     </Link>
                     <Link href="/posts" passHref>
-                        <a className="py-2 px-4 inline-block">Posts</a>
+                        <a data-cy="nav-posts" className="py-2 px-4 inline-block">Posts</a>
                     </Link>
                 </div>
             </header>

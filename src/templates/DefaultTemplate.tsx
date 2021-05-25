@@ -10,7 +10,7 @@ function DefaultTemlpate({ children }) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <div className="grid grid-cols-2 grid-rows-1 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4">
                 {children}
             </div>
         </Layout>
