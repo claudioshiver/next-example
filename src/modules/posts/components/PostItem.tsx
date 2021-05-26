@@ -4,6 +4,7 @@ import IPost from "../models/IPost";
 import Post from "../models/Post";
 import {connect} from "react-redux";
 import {selectUser} from "../../users/state/slice";
+import {useLogger} from "../../commons/logger";
 
 type PostItemProps =
     { post: IPost } &
@@ -15,7 +16,8 @@ const PostItem: React.FC<PostItemProps> = function (props: PostItemProps) {
         user: userRaw
     } = props;
 
-    console.log('PostItem', postRaw.id)
+    const logger = useLogger(PostItem.name);
+    logger.info('render %s', postRaw.id);
 
     const post = Post.get({
         ...postRaw,

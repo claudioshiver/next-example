@@ -5,6 +5,7 @@ import classNames from "classnames";
 import {connect} from "react-redux";
 import {AppDispatch} from "../../commons/store";
 import IUser from "../models/IUser";
+import {useLogger} from "../../commons/logger";
 
 type UserItemProps =
     { user: IUser } &
@@ -16,7 +17,8 @@ const UserItem: React.FC<UserItemProps> = function (props: UserItemProps) {
         toggleActiveUser
     } = props;
 
-    console.log('UserItem', userRaw.id)
+    const logger = useLogger(UserItem.name);
+    logger.info('render %s', userRaw.id);
 
     const user = User.get(userRaw);
 

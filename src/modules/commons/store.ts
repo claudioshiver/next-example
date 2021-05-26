@@ -1,15 +1,21 @@
 import { configureStore } from '@reduxjs/toolkit';
 import {useMemo} from "react";
 import {usersSlice} from "../users/state/slice";
-import {errorsSlice} from "../errors/state/slice";
+import {errorsMiddleware, errorsSlice} from "../errors/state/slice";
 import {postsSlice} from "../posts/state/slice";
+
+const middleware = function(getDefaultMiddleware: () => any[]) {
+    return getDefaultMiddleware()
+        .concat(errorsMiddleware);
+};
 
 let store = configureStore({
     reducer: {
         users: usersSlice.reducer,
         errors: errorsSlice.reducer,
         posts: postsSlice.reducer
-    }
+    },
+    middleware
 });
 
 function initStore(preloadedState) {
@@ -19,6 +25,7 @@ function initStore(preloadedState) {
             errors: errorsSlice.reducer,
             posts: postsSlice.reducer
         },
+        middleware,
         preloadedState
     });
 

@@ -7,6 +7,7 @@ import {connect} from "react-redux";
 import {selectPosts, selectPostsLoading} from "../state/slice";
 import PostsItem from "./PostItem";
 import {AppDispatch, RootState} from "../../commons/store";
+import {useLogger} from "../../commons/logger";
 
 type PostListProps =
     ReturnType<typeof mapStateToProps> &
@@ -19,7 +20,8 @@ const PostList: React.FC<PostListProps> = function(props: PostListProps) {
         getRandomPosts
     } = props;
 
-    console.log('PostList')
+    const logger = useLogger(PostList.name);
+    logger.info('render');
 
     const variant = useVariant(loading);
 

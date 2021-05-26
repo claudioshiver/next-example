@@ -4,7 +4,6 @@ import IPost from "../models/IPost";
 import LoadingState from "../../commons/enums/LoadingState";
 import {getRandomPosts} from "./thunk";
 import {postsAdapter, postsSelectors} from "./adapter";
-import {usersSelectors} from "../../users/state/adapter";
 
 export interface PostsState {
     status: LoadingState;

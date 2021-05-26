@@ -7,6 +7,7 @@ import UserItem from "./UserItem";
 import {AppDispatch, RootState} from "../../commons/store";
 import {connect} from "react-redux";
 import {selectUsers, selectUsersLoading} from "../state/slice";
+import {useLogger} from "../../commons/logger";
 
 type UserListProps =
     ReturnType<typeof mapStateToProps> &
@@ -19,7 +20,8 @@ const UserList: React.FC<UserListProps> = function(props: UserListProps) {
         getRandomUsers
     } = props;
 
-    console.log('UserList')
+    const logger = useLogger(UserList.name);
+    logger.info('render');
 
     const variant = useVariant(loading);
 

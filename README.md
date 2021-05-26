@@ -57,6 +57,16 @@ Yuo can learn more about Tailwind CSS at the following resources:
 
 ## Tools 
 
+#### Logs
+
+This project uses `pino` to print logs. It can be configured to send logs to various tools.
+You can learn more about this library at the following resources:
+
+- [Pino API](https://github.com/pinojs/pino/blob/master/docs/api.md) - documentation for server side
+- [Browser API](https://github.com/pinojs/pino/blob/master/docs/browser.md) - documentation for client side
+- [Transports](https://github.com/pinojs/pino/blob/master/docs/transports.md) - transports plugins
+- [Redaction](https://github.com/pinojs/pino/blob/master/docs/redaction.md) - hide sensitive data
+
 #### Versioning
 
 This project uses `semantic-release` to analyze commit messages and determine the type of changes in the codebase. 
