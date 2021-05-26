@@ -1,12 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {Action, configureStore, Middleware} from '@reduxjs/toolkit';
 import {useMemo} from "react";
 import {usersSlice} from "../users/state/slice";
 import {errorsMiddleware, errorsSlice} from "../errors/state/slice";
 import {postsSlice} from "../posts/state/slice";
 
-const middleware = function(getDefaultMiddleware: () => any[]) {
+const middleware = function(getDefaultMiddleware) {
     return getDefaultMiddleware()
-        .concat(errorsMiddleware);
+        .concat(errorsMiddleware as Middleware<(action: Action) => any, ReturnType<typeof store.getState>>);
 };
 
 let store = configureStore({
