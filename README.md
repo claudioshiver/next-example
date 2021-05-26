@@ -67,6 +67,15 @@ You can learn more about this library at the following resources:
 - [Transports](https://github.com/pinojs/pino/blob/master/docs/transports.md) - transports plugins
 - [Redaction](https://github.com/pinojs/pino/blob/master/docs/redaction.md) - hide sensitive data
 
+#### Storybook
+
+This project uses `storybook` to build UI components in isolation from app's business logic, data and context.
+You can learn more at the following links:
+
+- [Get Started](https://storybook.js.org/docs/react/get-started/introduction) - official documentation
+- [Configuration](https://storybook.js.org/docs/react/configure/overview) - configure storybook
+- [MDX Format](https://storybook.js.org/docs/react/api/mdx) - markdown documentation
+
 #### Versioning
 
 This project uses `semantic-release` to analyze commit messages and determine the type of changes in the codebase. 

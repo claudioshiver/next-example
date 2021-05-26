@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import ErrorsWrapper from "../modules/errors/components/ErrorsWrapper";
 import Link from "next/link";
+import ErrorsList from "../modules/errors/components/ErrorList";
 
 const Layout: React.FC = function({ children }) {
     return (
@@ -24,7 +24,7 @@ const Layout: React.FC = function({ children }) {
 
             {children}
 
-            <ErrorsWrapper/>
+            <ErrorsList/>
 
             <footer className="mt-5">
                 <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>

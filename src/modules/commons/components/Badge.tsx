@@ -7,7 +7,7 @@ export enum BadgeType {
     WARNING = 'warning'
 }
 
-interface BadgeProps {
+export interface BadgeProps {
     variant: BadgeType
 }
 
